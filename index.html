@@ -1192,74 +1192,65 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				
 			
 <style>
-/* Force horizontal layout for social icons */
+/* Force horizontal layout */
 #ocean_social-3.widget-oceanwp-social ul {
-    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* or center */
+    align-items: center;
+    gap: 20px; /* Space between icons */
     padding: 0;
     margin: 0;
-    display: flex; /* Main fix: horizontal line */
-    justify-content: flex-start; /* Align left – change to center if preferred */
-    align-items: center;
-    gap: 15px; /* Space between icons – cleaner than margins */
+    list-style: none;
 }
 
 #ocean_social-3.widget-oceanwp-social ul li {
-    display: inline-block; /* Backup for flex */
-    margin: 0; /* Remove any default margins */
+    margin: 0;
 }
 
-/* Base icon styles – white circle background */
+/* Larger circle container – this is the key parent that was limiting the icon */
 #ocean_social-3.widget-oceanwp-social ul li a {
     background-color: #ffffff !important;
     border: 2px solid #ffffff !important;
     border-radius: 50%;
-    width: 70px !important;
-    height: 70px !important;
+    width: 120px !important;   /* ← Increased to fit larger icon */
+    height: 120px !important;  /* ← Must match width for perfect circle */
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
 
-/* Icon size and color */
+/* Larger icon itself */
 #ocean_social-3.widget-oceanwp-social ul li a .owp-icon {
-    width: 100px !important;
-    height: 100px !important;
+    width: 80px !important;   /* ← Main control for icon size – increase more if needed */
+    height: 80px !important;
 }
 
+/* SVG color inheritance */
 #ocean_social-3.widget-oceanwp-social ul li a .owp-icon use {
     fill: currentColor !important;
 }
 
 /* Brand colors */
 #ocean_social-3.widget-oceanwp-social ul li a[href*="linkedin"] {
-    color: #333333 !important; /* LinkedIn blue */
+    color: #0077b5 !important;
 }
 
 #ocean_social-3.widget-oceanwp-social ul li a[href*="github"] {
-    color: #333333 !important; /* GitHub black */
+    color: #333333 !important;
 }
 
-/* Hover: dark background, white icons */
+/* Hover */
 #ocean_social-3.widget-oceanwp-social ul li a:hover {
     background-color: #000000 !important;
-    border-color: #000000 !important;
     color: #ffffff !important;
 }
 
 #ocean_social-3.widget-oceanwp-social ul li a:hover .owp-icon use {
     fill: #ffffff !important;
 }
-
-/* "Follow Me" title styling (blue and bold) */
-.follow-me-title,
-h3.widget-title { /* Adjust if your title has different class */
-    color: #007bff !important;
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
 </style>
+
 			
 		
 			</div>			</div><!-- .footer-one-box -->
