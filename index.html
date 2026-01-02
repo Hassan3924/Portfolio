@@ -1192,12 +1192,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				
 			
 <style>
-/* Force horizontal layout */
+/* Horizontal layout */
 #ocean_social-3.widget-oceanwp-social ul {
     display: flex;
     justify-content: flex-start; /* or center */
     align-items: center;
-    gap: 20px; /* Space between icons */
+    gap: 20px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -1207,31 +1207,38 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     margin: 0;
 }
 
-/* Larger circle container – this is the key parent that was limiting the icon */
+/* Larger circle container (base) */
 #ocean_social-3.widget-oceanwp-social ul li a {
     background-color: #ffffff !important;
     border: 2px solid #ffffff !important;
     border-radius: 50%;
-    width: 120px !important;   /* ← Increased to fit larger icon */
-    height: 120px !important;  /* ← Must match width for perfect circle */
+    width: 80px !important;    /* Base circle size – increased */
+    height: 80px !important;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
 
-/* Larger icon itself */
+/* Larger icon (base) – this is what controls the actual logo size */
 #ocean_social-3.widget-oceanwp-social ul li a .owp-icon {
-    width: 80px !important;   /* ← Main control for icon size – increase more if needed */
-    height: 80px !important;
+    width: 50px !important;   /* ← Increased significantly – try 60px for even bigger */
+    height: 50px !important;
 }
 
-/* SVG color inheritance */
+/* Optional: Make icon grow slightly on hover for better effect */
+#ocean_social-3.widget-oceanwp-social ul li a:hover .owp-icon {
+    width: 60px !important;   /* Grows on hover */
+    height: 60px !important;
+    transition: all 0.3s ease;
+}
+
+/* SVG color */
 #ocean_social-3.widget-oceanwp-social ul li a .owp-icon use {
     fill: currentColor !important;
 }
 
-/* Brand colors */
+/* Brand colors (base) */
 #ocean_social-3.widget-oceanwp-social ul li a[href*="linkedin"] {
     color: #0077b5 !important;
 }
@@ -1240,9 +1247,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     color: #333333 !important;
 }
 
-/* Hover */
+/* Hover: dark background, white icon */
 #ocean_social-3.widget-oceanwp-social ul li a:hover {
     background-color: #000000 !important;
+    border-color: #000000 !important;
     color: #ffffff !important;
 }
 
