@@ -340,13 +340,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 				
 			
-				<style>
-/* Horizontal layout – already good, but reinforced */
+<style>
+/* Horizontal layout */
 #ocean_social-3.widget-oceanwp-social ul.oceanwp-social-icons {
     display: flex !important;
-    justify-content: flex-start; /* or center for centered */
+    justify-content: flex-start; /* or center for centered alignment */
     align-items: center;
-    gap: 20px !important; /* Space between icons */
+    gap: 15px !important; /* Moderate space between icons */
     padding: 0;
     margin: 0;
     list-style: none;
@@ -356,30 +356,30 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     margin: 0;
 }
 
-/* Circle background on link */
+/* Moderate circle container */
 #ocean_social-3.widget-oceanwp-social ul li a {
     background-color: #ffffff !important;
     border: 2px solid #ffffff !important;
     border-radius: 50% !important;
-    width: 40px !important;   /* Circle size */
-    height: 40px !important;
+    width: 60px !important;    /* Moderate circle size (down from 80px) */
+    height: 60px !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    text-decoration: none; /* Remove underline if any */
+    text-decoration: none;
 }
 
-/* Main fix: Target Font Awesome <i> icons directly (not .owp-icon) */
+/* Moderate icon size */
 #ocean_social-3.widget-oceanwp-social ul li a i {
-    font-size: 30px !important;   /* ← This controls the actual icon size – increase for bigger */
-    color: inherit !important;     /* Inherits brand color from parent */
+    font-size: 32px !important;   /* Moderate size – clean and visible without being oversized */
+    color: inherit !important;
     transition: all 0.3s ease;
 }
 
-/* Override the inline font-size:25; on <a> */
+/* Override any old inline font-size */
 #ocean_social-3.widget-oceanwp-social ul li a {
-    font-size: inherit !important; /* Prevents inline style from limiting icon */
+    font-size: inherit !important;
 }
 
 /* Brand colors */
@@ -391,19 +391,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     color: #333333 !important; /* GitHub black */
 }
 
-/* Hover: dark background, white icon */
+/* Hover: dark background, white icon + slight grow */
 #ocean_social-3.widget-oceanwp-social ul li a:hover {
     background-color: #000000 !important;
     border-color: #000000 !important;
 }
 
 #ocean_social-3.widget-oceanwp-social ul li a:hover i {
-    color: #ffffff !important; /* White icon on hover */
-}
-
-/* Optional: Slight grow on hover */
-#ocean_social-3.widget-oceanwp-social ul li a:hover i {
-    font-size: 60px !important;
+    color: #ffffff !important;
+    font-size: 38px !important; /* Gentle grow on hover for interactivity */
 }
 </style>
 			
