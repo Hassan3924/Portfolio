@@ -210,20 +210,21 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		background: #1E3A8A;
 	  color: #FFFFFF;
 	/* Adjust size */
-    height: 50px;          /* Same as width = circle */
-    border-radius: 10%;     /* Full circle */
-    margin: 15px;           /* Space between */
-    padding: 10px;
+    height: 40px;          /* Same as width = circle */
+    border-radius: 30px;     /* Full circle */
+    margin: 8px; /* Less space between tags */
+    padding: 8px 20px;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
-    line-height: 1.3;
+    line-height: 1.2;
     flex-direction: column;
 }
 
-/* Optional: Better text wrapping for long names */
+/* Better text wrapping for longer names (e.g., "Hyperparameter Tuning") */
 .circular-skills .su-label span {
-	    word-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal; /* Allows multi-line if needed */
 }
 
 </style>
