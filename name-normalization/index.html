@@ -201,7 +201,32 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				
 <article class="single-page-article clr">
 
-	
+	<style>
+.circular-skills .su-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+		background: #1E3A8A;
+	  color: #FFFFFF;
+	/* Adjust size */
+    height: 50px;          /* Same as width = circle */
+    border-radius: 10%;     /* Full circle */
+    margin: 15px;           /* Space between */
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.3;
+    flex-direction: column;
+}
+
+/* Optional: Better text wrapping for long names */
+.circular-skills .su-label span {
+	    word-wrap: break-word;
+}
+
+</style>
 <div class="entry clr" itemprop="text">
 
 	
